@@ -81,14 +81,14 @@ c3s_third_party_cpp_sources = files([
   'src/third-party/spoa/sisd_alignment_engine.cpp',
 ])
 
-isoseqs_src_include_directories = include_directories('src/')
+c3s_src_include_directories = include_directories('src/')
 
 c3s_third_party_lib_impl = static_library(
   'c3s_third_party',
   c3s_third_party_cpp_sources,
   install : false,
   dependencies : c3s_lib_deps,
-  include_directories : isoseqs_src_include_directories,
+  include_directories : c3s_src_include_directories,
   cpp_args : c3s_flags)
 
 pbsv_main = executable(
